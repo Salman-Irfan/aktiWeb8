@@ -1,0 +1,42 @@
+.transformStyles{
+    width: 50%;
+    background-color: red;
+    height: 900px;
+    /* transform: translateZ(45%); */
+    /* transform: rotateZ(45deg); */
+    /* transform: scaleX(200%);
+    transform: scaleY(200%); */
+}
+
+.transformStyles:hover{
+    width: 80%;
+    background-color: green;
+    /* transition: width;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out; */
+    
+    /* ###### ANimations */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: diffStylesAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes diffStylesAnimation {
+    0%{
+        background-color: blue;
+        width: 50%;
+        transform: rotateZ(0deg);
+    }
+    25%{
+        color: brown;
+    }
+    100%{
+        background-color: yellow;
+        width: 80%;
+        transform: rotate(360deg);
+    }
+}
