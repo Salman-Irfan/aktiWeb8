@@ -1,7 +1,7 @@
 .transformStyles{
     width: 50%;
     background-color: red;
-    height: 900px;
+    /* height: 90px; */
     /* transform: translateZ(45%); */
     /* transform: rotateZ(45deg); */
     /* transform: scaleX(200%);
