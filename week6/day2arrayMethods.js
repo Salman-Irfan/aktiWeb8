@@ -1,3 +1,10 @@
+console.log(document)
+const textRed300 = document.getElementsByClassName(`text-red-300`)
+console.log(textRed300[1])
+
+const querySel = document.querySelectorAll(`.text-red-300`)
+console.log(querySel[0])
+
 // array k mashoor o maroof methods
 // insertion and deletion from last
 const bilalMarks = [12, 18, 4, 5, 6, 87]
@@ -26,3 +33,4 @@ const bilalFriends = [`faizan`, `anas`, `zeeshan`, `abdullah`]
 // console.log(bilalFriends)
 bilalFriends.splice(1,2, `rizwan`, `talha`)
 console.log(bilalFriends)
+
