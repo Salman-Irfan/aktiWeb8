@@ -62,6 +62,19 @@ theme.style.backgroundColor = "red";
 theme.style.height = `100vh`;
 
 
-
 const toggleTheme = document.getElementById("toggleTheme");
 toggleTheme.addEventListener("click", handleSwitchTheme );
+
+const somethingFromJs = document.getElementById("somethingFromJs")
+console.log(somethingFromJs)
+somethingFromJs.innerHTML = `
+    <div>
+        h1 of html changed hto h2 with some content
+        <nav>
+            <ul>
+                <li>nav menu bar lists can alos goes here</li>
+                <li>ise sy miltu julti cheez ka nam react js hai,ek hil file mei js or html k code ko likna with client side functionality</li>
+            </ul>
+        </nav>
+    </div>
+`
