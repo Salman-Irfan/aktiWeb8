@@ -10,9 +10,9 @@ const abdullah = {
         postalCode: 54782
     },
     // array inside an object
-    marks: [40,78,67,99],
+    marks: [40, 78, 67, 99],
     // function inside an object
-    makeFullName: (fname, lname)=>{
+    makeFullName: (fname, lname) => {
         return `${fname} ${lname}`
     },
     // make a normal function inside this object that genFullName usinf this.firstName
@@ -30,13 +30,13 @@ const users = [
         email: `abdullah@gmail.com`
         // inside this object, more arrays, objects and functions can be accessed
     },
-    
+
     {
         id: 2,
         name: `bilal`,
         email: `bilal@gmail.com`
     },
-    
+
     {
         id: 3,
         name: `faizan`,
@@ -53,4 +53,16 @@ console.log(users[0].email)
 console.log(`http request via axios`)
 
 const kuchBhi = await axios.get(`https://jsonplaceholder.typicode.com/todos/1`) // Promise
-console.log(kuchBhi.data) 
+console.log(kuchBhi.data)
+
+const theme = document.getElementById("theme");
+theme.style.backgroundColor = "red";
+
+const toggleTheme = document.getElementById("toggleTheme");
+toggleTheme.addEventListener("click", () => {
+    if (theme.style.backgroundColor === "red") {
+        theme.style.backgroundColor = "yellow";
+    } else if (theme.style.backgroundColor === "yellow") {
+        theme.style.backgroundColor = "red";
+    }
+});
