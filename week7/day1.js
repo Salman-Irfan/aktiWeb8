@@ -1,3 +1,5 @@
+import { handleSwitchTheme } from "../utils/themes/handleSwitchTheme.js"
+
 const abdullah = {
     "firstName": 'Abdullah', // string
     lastName: `Waheed`, //string
@@ -57,12 +59,9 @@ console.log(kuchBhi.data)
 
 const theme = document.getElementById("theme");
 theme.style.backgroundColor = "red";
+theme.style.height = `100vh`;
+
+
 
 const toggleTheme = document.getElementById("toggleTheme");
-toggleTheme.addEventListener("click", () => {
-    if (theme.style.backgroundColor === "red") {
-        theme.style.backgroundColor = "yellow";
-    } else if (theme.style.backgroundColor === "yellow") {
-        theme.style.backgroundColor = "red";
-    }
-});
+toggleTheme.addEventListener("click", handleSwitchTheme );
