@@ -8,3 +8,9 @@ export const getDummyApiData = async () => {
         return (error.message)
     }
 }
+
+export const hideNotif = () => {
+    hideButton.style.display = "none"
+    showNotification.innerHTML = `
+        `
+}
