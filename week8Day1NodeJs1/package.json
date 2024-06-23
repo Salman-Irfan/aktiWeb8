@@ -1,0 +1,15 @@
+{
+  "name": "week8day1nodejs1",
+  "version": "1.0.0",
+  "description": "khichri banai hai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "bilal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

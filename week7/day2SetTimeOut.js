@@ -5,6 +5,7 @@ const hideButton = document.getElementById("hideButton")
 hideButton.style.display = "none"
 
 setTimeout(() => {
+    
 
     showNotification.innerHTML = `
         <div>
