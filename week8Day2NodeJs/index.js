@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const port = 3000
 
 // app.get(`/`, (req,res)=>{
@@ -29,7 +30,7 @@ app.get(`/`, (req, res)=>{
     })
 })
 
-app.get(`/about`, (req, res)=>{
+app.get(`/about`, cors(), (req, res)=>{
     return res.json({
         success: true,
         message: `about route is being triggered`
