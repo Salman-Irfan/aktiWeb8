@@ -1,4 +1,4 @@
-const Book = require("../models/bookodel")
+const Book = require("../../models/bookModel")
 
 const deleteBookByIdController = async (req, res) => {
     const { id } = req.params

@@ -1,4 +1,4 @@
-const Book = require("../models/bookodel")
+const Book = require("../../models/bookModel")
 
 const updateBookByIdController = async (req, res) => {
     const { bookName, bookPrice, bookAuthor, bookDescription } = req.body

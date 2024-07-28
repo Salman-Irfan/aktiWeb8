@@ -1,4 +1,4 @@
-const Book = require("../models/bookodel")
+const Book = require("../../models/bookModel")
 
 const readBookByIdController = async (req, res) => {
     try {

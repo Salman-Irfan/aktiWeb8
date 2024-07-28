@@ -1,4 +1,4 @@
-const Book = require("../models/bookodel")
+const Book = require("../../models/bookModel")
 
 const readAllBooksController = async(req, res)=>{
     const allBooks = await Book.find()
