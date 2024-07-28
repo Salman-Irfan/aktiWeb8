@@ -1,3 +1,4 @@
+const appConfig = require("../../config/appConfig")
 const User = require("../../models/userModel")
 const bcrypt = require('bcrypt')
 const userSignUpController = async (req, res) => {
@@ -19,7 +20,7 @@ const userSignUpController = async (req, res) => {
 
         // hash its password, and save the hased paswword in db
         // Making the password hash i.e encryption
-        const SALT_ROUNDS = 5;
+        const SALT_ROUNDS = +appConfig.SALT_ROUNDS // + is a shorthand of parseint
         const salt = bcrypt.genSaltSync(SALT_ROUNDS);
         const hashedPassword = bcrypt.hashSync(userPassword, salt);
 

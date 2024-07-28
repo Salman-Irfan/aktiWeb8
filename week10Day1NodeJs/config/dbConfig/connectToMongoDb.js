@@ -1,8 +1,9 @@
 const mongoose  = require("mongoose")
+const appConfig = require("../appConfig")
 
 const connectToMongoDb = async () => {
     try {
-        const MONGO_URL = `mongodb://127.0.0.1:27017/booksProject`
+        const MONGO_URL = appConfig.MONGO_DB_URI
 
         const mongoResponse = await mongoose.connect(MONGO_URL)
         if (mongoResponse) {

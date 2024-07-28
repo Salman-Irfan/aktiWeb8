@@ -1,5 +1,7 @@
 const User = require("../../models/userModel")
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken');
+const appConfig = require("../../config/appConfig");
 
 const userSignInController = async (req, res) => {
 
@@ -31,9 +33,13 @@ const userSignInController = async (req, res) => {
     }
 
     // then only  email and password 
+    // assign jwt token
+    // Generating an authToken if admin successfully logins
+    const authToken = jwt.sign({ email: existingUser.userEmail }, appConfig.JWT_SECRET);
     return res.json({
         success: true,
-        message: `login successful`
+        message: `login successful`,
+        authToken
     })
 
 }

@@ -1,19 +1,16 @@
 const express = require('express')
 const cors = require('cors')
 const router = require('./routes')
-const connectToMongoDb = require('./config/connectToMongoDb')
-const createBookController = require('./controllers/booksControllers/createBookController')
-const readAllBooksController = require('./controllers/booksControllers/readAllBooksController)')
-const readBookByIdController = require('./controllers/booksControllers/readBookByIdController')
-const deleteBookByIdController = require('./controllers/booksControllers/deleteBookByIdController')
-const updateBookByIdController = require('./controllers/booksControllers/updateBookByIdController')
+const connectToMongoDb = require('./config/dbConfig/connectToMongoDb')
+const appConfig = require('./config/appConfig')
+
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
 
-const port = 3000
+const port = appConfig.PORT
 
 // write any logic to connect node server woith mongo db, before request handlers
 connectToMongoDb()
